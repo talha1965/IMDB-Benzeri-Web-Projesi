@@ -1,0 +1,154 @@
+/* Ana Renkler (Siteden alındı) */
+:root {
+    --color-background-dark: #121212;
+    --color-background-secondary: #1E1E1E;
+    --color-accent-primary: #E50914;
+    --color-text-primary: #F5F5F5;
+    --color-text-muted: #AAAAAA;
+    --color-border: #2c2c2c;
+}
+
+body {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-primary);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Dashboard Kartları */
+.dashboard-card {
+    background-color: var(--color-background-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-primary); /* Üzerine gelince kırmızı çerçeve */
+    box-shadow: 0 8px 15px rgba(229, 9, 20, 0.1); /* Hafif kırmızı gölge */
+}
+
+.dashboard-card .card-body {
+    padding: 2rem;
+}
+
+.dashboard-card .card-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+.dashboard-card .card-title i {
+    margin-right: 10px;
+    color: var(--color-accent-primary) !important; /* İkonları kırmızı yap */
+}
+
+.dashboard-card .card-text {
+    color: var(--color-text-muted);
+}
+
+/* Form ve Tablolar için Ana Kutu */
+.admin-container {
+    background-color: var(--color-background-secondary);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: var(--color-text-primary);
+}
+
+.admin-container h2 {
+    border-bottom: 2px solid var(--color-accent-primary);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Form Elemanları (Inputlar) - Karanlık Mod */
+.form-control, .form-select {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #2c2c2c;
+    color: #fff;
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.25);
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+/* Tablo Stilleri - Karanlık Mod */
+.table {
+    color: var(--color-text-primary);
+    border-color: var(--color-border);
+}
+
+.table thead th {
+    background-color: #000;
+    color: var(--color-accent-primary);
+    border-bottom: 2px solid var(--color-accent-primary);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.table td, .table th {
+    border-color: var(--color-border);
+    vertical-align: middle;
+}
+
+/* Butonlar */
+.btn-primary {
+    background-color: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+}
+
+.btn-primary:hover {
+    background-color: #b20710;
+    border-color: #b20710;
+}
+
+/* Linkler */
+a {
+    text-decoration: none;
+}
+/* Admin Navbar Özelleştirmesi */
+.navbar-dark.bg-dark {
+    background-color: #141414 !important; /* Netflix tarzı çok koyu gri */
+    border-bottom: 1px solid #333;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #E50914 !important; /* Logo rengi kırmızı */
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+.nav-link.active {
+    color: #E50914 !important; /* Aktif sayfa kırmızı olsun */
+    font-weight: 700;
+}

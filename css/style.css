@@ -1,0 +1,759 @@
+/* Ana Renk Paleti */
+:root {
+  --color-background-dark: #121212;
+  --color-background-secondary: #1e1e1e;
+  --color-accent-primary: #e50914;
+  --color-text-primary: #f5f5f5;
+  --color-text-muted: #aaaaaa;
+  --color-border: #2c2c2c;
+}
+
+/* Genel Sayfa Stili */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-background-dark);
+  background-image: radial-gradient(
+    circle at center top,
+    #1a1a1a 0%,
+    var(--color-background-dark) 70%
+  );
+  color: var(--color-text-primary);
+  min-height: 100vh;
+}
+
+/* Navbar (Üst Menü) */
+.main-navbar {
+  background-color: var(--color-background-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-navbar .nav-link {
+  color: var(--color-text-muted);
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+  margin: 0 5px;
+}
+
+.main-navbar .nav-link.active,
+.main-navbar .nav-link:hover {
+  color: var(--color-text-primary);
+}
+
+.main-navbar .form-control {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+.main-navbar .form-control::placeholder {
+  color: var(--color-text-muted);
+}
+
+.main-navbar .btn-outline-danger {
+  border-color: var(--color-accent-primary);
+  color: var(--color-accent-primary);
+}
+.main-navbar .btn-outline-danger:hover {
+  background-color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+  color: white;
+}
+
+.main-navbar .btn-danger {
+  background-color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+.main-navbar .btn-danger:hover {
+  background-color: #c40812;
+  border-color: #c40812;
+}
+
+.main-navbar .dropdown-menu {
+  background-color: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+}
+.main-navbar .dropdown-item {
+  color: var(--color-text-muted);
+}
+.main-navbar .dropdown-item:hover {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary);
+}
+
+/* Navbar Logo */
+.main-navbar .navbar-brand {
+  padding: 0;
+}
+.main-navbar .navbar-brand img {
+  height: 42px;
+  border-radius: 4px;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Footer (Alt Kısım) */
+.main-footer {
+  background-color: var(--color-background-secondary);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 5rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+}
+.main-footer .footer-links {
+  margin-bottom: 1.5rem;
+}
+.main-footer .footer-links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 0.9rem;
+  transition: color 0.2s ease-in-out;
+}
+.main-footer .footer-links a:hover {
+  color: var(--color-accent-primary);
+}
+.main-footer .footer-social {
+  margin-bottom: 1.5rem;
+}
+.main-footer .footer-social a {
+  font-size: 1.75rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  margin: 0 0.75rem;
+  transition: color 0.2s ease-in-out;
+}
+.main-footer .footer-social a:hover {
+  color: var(--color-text-primary);
+}
+.main-footer .footer-copyright {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+
+/* Sidebar (Offcanvas) */
+.offcanvas {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-primary);
+}
+.offcanvas .offcanvas-header {
+  border-bottom: 1px solid var(--color-border);
+}
+.offcanvas .offcanvas-title {
+  color: var(--color-text-primary);
+}
+.offcanvas .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+.offcanvas .offcanvas-body .nav-link {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: 6px;
+  transition: color 0.2s, background-color 0.2s;
+}
+.offcanvas .offcanvas-body .nav-link i {
+  margin-right: 10px;
+  width: 20px;
+}
+.offcanvas .offcanvas-body .nav-link:hover {
+  color: var(--color-accent-primary);
+  background-color: var(--color-background-dark);
+}
+
+/* Giriş/Kayıt Formları */
+.auth-container {
+  background-color: var(--color-background-secondary);
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+.auth-container h2 {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.auth-form-input {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+}
+.auth-form-input::placeholder {
+  color: var(--color-text-muted);
+}
+.auth-form-input:focus {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary);
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.25);
+}
+.auth-link {
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.auth-link a {
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* Ana Sayfa Promo Blok */
+.promo-section {
+  background-color: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+.promo-slider-item {
+  position: relative;
+  height: 400px;
+  background-color: #000;
+}
+.promo-slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+.promo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.promo-poster-overlay {
+  position: relative;
+  width: 100px;
+  height: 140px;
+  flex-shrink: 0;
+}
+.promo-poster-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.plus-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border-bottom-right-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.plus-icon:hover {
+  background-color: var(--color-accent-primary);
+  color: #fff;
+}
+.promo-trailer-info {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+.promo-trailer-info .play-button {
+  font-size: 3rem;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 0.75rem;
+  transition: color 0.2s;
+}
+.promo-trailer-info .play-button:hover {
+  color: var(--color-accent-primary);
+}
+.promo-trailer-info .promo-text h5 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.promo-news-list {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.promo-news-list .promo-news-title {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+/* Haber Listesi Kaydırma Çubuğu Gizleme (Kesin Çözüm) */
+.promo-news-list ul {
+  flex-grow: 1;
+  overflow: hidden !important; /* Hem yatay hem dikey taşmayı kesinlikle gizle */
+
+  /* Webkit tarayıcılar (Chrome, Safari) için scrollbar'ı tamamen yok et */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.promo-news-list ul::-webkit-scrollbar {
+  display: none;
+}
+.promo-news-item img {
+  /* Genişliği artırdık (örneğin 140px veya 150px yapabilirsin) */
+  width: 150px;
+
+  /* Yüksekliği aspect-ratio ile otomatik ayarla (16:9 oranı) */
+  aspect-ratio: 16 / 9;
+  height: auto;
+
+  object-fit: cover;
+  border-radius: 4px; /* Hafif köşe yuvarlama */
+}
+.promo-news-item .news-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  transition: color 0.2s;
+}
+.promo-news-item .news-source {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.promo-news-item:hover .news-title {
+  color: var(--color-accent-primary);
+}
+.browse-trailers-link {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.browse-trailers-link:hover {
+  color: var(--color-accent-primary);
+}
+@media (max-width: 991px) {
+  .promo-news-list {
+    display: none;
+  }
+  .promo-slider-item {
+    position: relative;
+    height: 480px; /* 400'den 480'e çıkardık */
+    background-color: #000;
+  }
+}
+/* Slider Okları - Genel Tasarım */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Dikeyde tam ortalar */
+    width: 25px;  /* Genişlik */
+    height: 40px; /* Yükseklik - Dikdörtgen kutu formu */
+    background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam siyah arka plan */
+    border: none;
+    color: white;
+    font-size: 1.5rem; /* Ok ikonunun boyutu */
+    cursor: pointer;
+    z-index: 100; /* Her şeyin üstünde dursun */
+    
+    /* İkonu kutunun tam ortasına hizala */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Yumuşak geçiş efektleri */
+    transition: all 0.3s ease;
+}
+
+/* Hover (Üzerine Gelince) Efekti */
+.slider-arrow:hover {
+    background-color: var(--color-accent-primary); /* Senin kırmızı rengin */
+    width: 60px; /* Üzerine gelince hafif genişlesin */
+}
+
+/* Sol Ok - Sola Yasla */
+.arrow-left {
+    left: 0;
+    border-top-right-radius: 4px;    /* Sadece içe bakan köşeleri yuvarla */
+    border-bottom-right-radius: 4px;
+}
+
+/* Sağ Ok - Sağa Yasla */
+.arrow-right {
+    right: 0;
+    border-top-left-radius: 4px;     /* Sadece içe bakan köşeleri yuvarla */
+    border-bottom-left-radius: 4px;
+}
+
+/* Ana Sayfa - Kaydırmalı Sıralar */
+.category-row {
+  position: relative;
+}
+.category-row .category-title {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 1.75rem;
+  border-left: 4px solid var(--color-accent-primary);
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+.horizontal-swiper {
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+.swiper-slide {
+  height: auto;
+}
+.scroll-card {
+  background-color: var(--color-background-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.scroll-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.scroll-card a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.scroll-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-border);
+}
+.scroll-card .scroll-card-body {
+  padding: 1rem;
+  flex-grow: 1;
+}
+.scroll-card .scroll-card-body strong {
+  font-size: 1rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.8em; /* 2 satır yüksekliği */
+  margin-bottom: 0.25rem;
+}
+.scroll-card .scroll-card-body span {
+  font-size: 0.9rem;
+  color: #adb5bd;
+  display: block;
+}
+.scroll-card-rating {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+.scroll-card-rating i {
+  color: #f5c518;
+}
+.category-row .swiper-button-prev,
+.category-row .swiper-button-next {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  top: 55%;
+}
+.category-row:hover .swiper-button-prev,
+.category-row:hover .swiper-button-next {
+  opacity: 1;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.5rem !important;
+  font-weight: 900;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 12px;
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+}
+.swiper-button-prev::after {
+  padding-right: 15px;
+}
+.swiper-button-next::after {
+  padding-left: 15px;
+}
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  background-color: var(--color-accent-primary);
+}
+
+/* Profil Sayfası */
+.profile-header-wrapper {
+  position: relative;
+  margin-bottom: 4rem;
+}
+.profile-banner {
+  height: 300px;
+  background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+.profile-meta-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 1rem;
+  pointer-events: none;
+}
+.profile-avatar-big {
+  width: 130px;
+  height: 130px;
+  background-color: var(--color-accent-primary);
+  color: #fff;
+  border: 5px solid var(--color-background-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+}
+.review-card {
+  transition: transform 0.2s, border-color 0.2s;
+}
+.review-card:hover {
+  transform: translateX(5px);
+  border-color: #adb5bd;
+}
+
+/* Profil Menüsü (Düzeltildi) */
+.profile-menu .list-group-item {
+  background-color: var(--color-background-secondary);
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+  transition: all 0.2s ease;
+}
+.profile-menu .list-group-item:hover {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary);
+  border-color: var(--color-accent-primary);
+  z-index: 1;
+}
+.profile-menu .list-group-item.active {
+  background-color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+  color: #fff;
+}
+.profile-menu .list-group-item.active:hover {
+  background-color: #c40812;
+}
+/* --- Sağ Sütun: Haber Listesi (GÜÇLENDİRİLMİŞ TASARIM) --- */
+.promo-news-list {
+  /* Yükseklik soldaki slider ile eşit */
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background-secondary);
+  border-left: 1px solid var(--color-border); /* Slider ile arasına çizgi */
+  padding: 1.5rem !important; /* İç boşluğu artır */
+}
+
+/* "Haberler (Yakında)" Başlığı */
+.promo-news-list .promo-news-title {
+  color: var(--color-accent-primary); /* Başlık Kırmızı olsun */
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase; /* Büyük harf */
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Haber Listesi Kapsayıcısı */
+.promo-news-list ul {
+  flex-grow: 1;
+  overflow-y: hidden; /* Kaydırma çubuğunu gizle (İsteğin üzerine) */
+  padding-left: 0; /* Liste noktalama işaretlerini kaldır */
+}
+
+/* Tekil Haber Kartı */
+.promo-news-item {
+  display: flex;
+  align-items: flex-start; /* Resmi ve yazıyı üstten hizala */
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Altına çok hafif çizgi */
+  margin-bottom: 5px;
+}
+
+/* Haber Kartı Hover Efekti */
+.promo-news-item:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.05
+  ); /* Üzerine gelince hafif aydınlat */
+  transform: translateX(5px); /* Sağa doğru hafif kayma efekti */
+  box-shadow: -5px 0 0 var(--color-accent-primary); /* Sol tarafa kırmızı çizgi efekti */
+}
+
+/* Haber Görseli */
+.promo-news-item img {
+  width: 110px; /* Genişlik */
+  aspect-ratio: 16/9; /* Standart video oranı */
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Resme gölge ekle */
+}
+
+/* Haber İçerik Alanı */
+.news-content {
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Haber Başlığı */
+.promo-news-item .news-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+
+  /* Başlık çok uzunsa 2 satırda kesip ... koy */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s;
+}
+
+.promo-news-item:hover .news-title {
+  color: var(--color-accent-primary); /* Hoverda başlık kırmızı olsun */
+}
+
+/* Haber Kaynağı / Tarihi */
+.promo-news-item .news-source {
+  font-size: 0.75rem;
+  color: #adb5bd; /* Okunaklı gri */
+  font-weight: 400;
+  text-transform: uppercase; /* "TKBD ÖZEL" gibi dursun */
+}
+
+/* "Tüm Haberler" Linki */
+.browse-trailers-link {
+  margin-top: auto; /* En alta it */
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Sağa yasla */
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border);
+}
+
+.browse-trailers-link i {
+  margin-left: 5px;
+  transition: transform 0.2s;
+}
+
+.browse-trailers-link:hover {
+  color: var(--color-accent-primary);
+}
+
+.browse-trailers-link:hover i {
+  transform: translateX(5px); /* Ok işareti sağa kaysın */
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 991px) {
+  .promo-news-list {
+    display: none; /* Mobilde gizle (önceki kararımız) */
+  }
+  .promo-slider-item {
+    height: 350px;
+  }
+}
+
+/* Promo Blok Kenarlık Düzeltmesi */
+.promo-section {
+  border: 1px solid #2c2c2c !important; /* Rengi sabitle */
+  outline: none; /* Olası outline'ı kaldır */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Gölgeyi güçlendirerek kenarı yumuşat */
+}
+
+
+/* Slider Okları (Kutu Tasarımı) */
+    .slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-90%);
+        width: 50px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    .slider-arrow:hover {
+        background-color: #e50914; /* Senin tema rengin */
+        width: 60px;
+    }
+    .arrow-left { left: 0; border-radius: 0 4px 4px 0; }
+    .arrow-right { right: 0; border-radius: 4px 0 0 4px; }
+
+    /* Afiş Düzenlemesi (Küçültme) */
+    .promo-poster-overlay {
+        width: 100px; /* Afiş biraz küçüldü */
+        height: auto;
+        margin-right: 20px; /* Sağdaki yazıyla mesafe */
+    }
+    .promo-poster-overlay img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
